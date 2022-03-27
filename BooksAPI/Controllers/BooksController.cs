@@ -113,7 +113,7 @@ namespace BooksAPI.Controllers
             Book item = _context.Books.SingleOrDefault(b => b.BookId == id);
             if (item != null)
             {
-                patch.ApplyTo(item);
+                patch.ApplyTo(item, ModelState);
 
                 if (!ModelState.IsValid)
                 {
