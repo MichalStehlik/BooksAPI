@@ -138,6 +138,23 @@ namespace BooksAPI.Controllers
             }
         }
 
+/*
+ [
+  {
+    "path": "/pages",
+    "op": "replace",
+    "value": 130
+  },
+{
+    "path": "/title",
+    "op": "replace",
+    "value": "Dědeček"
+  }
+] 
+*/
+
+
+
         private bool BookExists(int id)
         {
             return _context.Books.Any(e => e.BookId == id);
